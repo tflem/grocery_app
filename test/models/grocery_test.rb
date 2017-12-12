@@ -14,4 +14,14 @@ class GroceryTest < ActiveSupport::TestCase
     @groceries.item = "     "
     assert_not @groceries.valid?
   end
+
+  test "item should not be too long" do
+    @groceries.item = "a" * 51
+    assert_not @groceries.valid?
+  end
+
+  test "quantity should be whole number" do
+    @groceries.quantity = 24.44
+    assert_not @groceries.valid?
+  end
 end

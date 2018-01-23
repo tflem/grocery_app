@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-ruby '2.4.2'
+ruby '2.5.0'
 gem 'rails', '~> 5.1.4'
 gem "minitest-rails"
 gem 'pg', '~> 0.18.4'
@@ -17,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'devise', '~> 4.2'
+gem 'devise', '~> 4.4'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 

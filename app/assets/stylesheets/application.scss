@@ -36,12 +36,24 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
+/* sign-in/sign-out */
+
+ul.hmenu {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+ul.hmenu li {
+  display: inline;
+}
+
 /* miscellaneous */
 
 .debug_dump {
   clear: both;
   float: left;
-  width: 100%;
-  margin-top: 45px;
+  width: 100em;
+  margin-top: 10em;
   @include box_sizing;
 }

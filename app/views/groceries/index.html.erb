@@ -1,0 +1,20 @@
+<h1>Grocery List</h1>
+
+<div class="table-responsive">
+<table class="table table-bordered">
+  <thead>
+    <tr class="success">
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Show</th>
+    </tr>
+
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.item %></td>
+        <td><%= item.quantity %></td>
+        <td><%= link_to 'Show', grocery_path(item) %></td>
+      </tr>
+    <% end %>
+</table>
+</div>

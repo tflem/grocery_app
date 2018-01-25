@@ -1,6 +1,10 @@
 class GroceriesController < ApplicationController
   before_action :authenticate_user!, only: [:new]
 
+  def index
+    @items = Grocery.all
+  end
+
   def show
     @item = Grocery.find(params[:id])
   end
@@ -11,8 +15,11 @@ class GroceriesController < ApplicationController
 
   def create
     @item = Grocery.new(grocery_params)
-    @item.save
-    redirect_to @item
+    if @item.save
+      redirect_to @item
+    else
+      render "new"
+    end
   end
 
   private

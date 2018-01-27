@@ -12,4 +12,15 @@ class AddingItemsTest < ActionDispatch::IntegrationTest
     assert_select "div#error_explanation"
     assert_select "div.field_with_errors"
   end
+
+  test "valid form input" do
+    get new_grocery_path
+    assert_difference "Grocery.count", 1 do
+      post groceries_path, params: { grocery: { item: "milk",
+                                                quantity: 2 } }
+    end
+    follow_redirect!
+    assert_template "groceries/show"
+    assert_not flash.empty?
+  end
 end

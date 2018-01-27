@@ -1,8 +1,8 @@
 class GroceriesController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:index, :new]
 
   def index
-    @items = Grocery.all
+    @all_items = Grocery.all
   end
 
   def show
@@ -16,7 +16,8 @@ class GroceriesController < ApplicationController
   def create
     @item = Grocery.new(grocery_params)
     if @item.save
-      redirect_to @item
+      flash[:success] = "Grocery Item Added!"
+      redirect_to groceries_path
     else
       render "new"
     end

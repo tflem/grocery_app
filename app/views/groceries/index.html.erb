@@ -3,13 +3,13 @@
 <div class="table-responsive">
 <table class="table table-bordered">
   <thead>
-    <tr class="success">
+    <tr class="info">
       <th>Item</th>
       <th>Quantity</th>
       <th>Show</th>
     </tr>
 
-    <% @items.each do |item| %>
+    <% @all_items.each do |item| %>
       <tr>
         <td><%= item.item %></td>
         <td><%= item.quantity %></td>

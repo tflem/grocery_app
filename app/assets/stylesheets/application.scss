@@ -35,7 +35,7 @@ h1 {
 
 /* mixins, variables, etc. */
 
-$gray-medium-light: #eaeaea;
+$gray-medium-light: #EAEAEA;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -57,6 +57,13 @@ ul.hmenu li {
 
 /* forms */
 
+input, textarea, select, .uneditable-input {
+  border: 0.1em solid #BBB;
+  width: 100%;
+  margin-bottom: 1em;
+  @include box_sizing;
+}
+
 #error_explanation {
   color: red;
   ul {
@@ -72,12 +79,12 @@ ul.hmenu li {
   }
 }
 
-/* miscellaneous */
+/* debugger */
 
 .debug_dump {
   clear: both;
   float: left;
-  width: 100em;
+  width: 100%;
   margin-top: 10em;
   @include box_sizing;
 }

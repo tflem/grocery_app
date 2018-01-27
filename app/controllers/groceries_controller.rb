@@ -17,7 +17,7 @@ class GroceriesController < ApplicationController
     @item = Grocery.new(grocery_params)
     if @item.save
       flash[:success] = "Grocery Item Added!"
-      redirect_to groceries_path
+      redirect_to @item
     else
       render "new"
     end

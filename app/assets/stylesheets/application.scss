@@ -16,14 +16,25 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-h1 {
+/* mixins, variables, etc. */
+
+$gray-medium-light: #EAEAEA;
+
+h2 {
   text-align: center;
   padding-bottom: 0.5em;
 }
 
-.item-field,
-.quantity-field {
-  margin-right: 0.5em;
+.item-heading,
+.quantity-heading {
+  font-size: 2em;
+}
+
+/* Buttons */
+
+.btn {
+  font-size: 1.1em;
+  color: #FFF;
 }
 
 /* Grocery Table */
@@ -32,10 +43,6 @@ h1 {
   align: center;
   font-size: 1.5em;
 }
-
-/* mixins, variables, etc. */
-
-$gray-medium-light: #EAEAEA;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -62,6 +69,14 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   margin-bottom: 1em;
   @include box_sizing;
+}
+
+.alert-alert {
+  @extend .alert-warning;
+}
+
+.alert-notice {
+  @extend .alert-info;
 }
 
 #error_explanation {

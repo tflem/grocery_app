@@ -1,13 +1,16 @@
-<%= link_to 'Add Another Item', new_grocery_path %>
-
-<p>
+<p class="item-heading">
   <strong>Item:</strong>
   <%= @item.item %>
 </p>
 
-<p>
+<p class="quantity-heading">
   <strong>Quantity:</strong>
   <%= @item.quantity %>
 </p>
 
-<%= link_to 'Show All Items', groceries_path %>
+<div class="btn btn-primary">
+  <%= link_to "Add Another Item", new_grocery_path, class: "btn" %>
+</div>
+<div class="btn btn-primary">
+  <%= link_to "Show All Items", groceries_path, class: "btn" %>
+</div>

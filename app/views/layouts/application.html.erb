@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Grocery App Extraordinaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= favicon_link_tag 'Fruits-Vegetables-icon.png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -9,11 +10,9 @@
   </head>
   <body>
     <div class="container-fluid">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
       <% flash.each do |message_type, message| %>
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <% end %>
+      <% end %>      
     </div>
 
     <ul class="hmenu">

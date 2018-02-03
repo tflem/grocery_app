@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby '2.5.0'
 gem 'rails', '~> 5.1.4'
-gem 'minitest', '~> 5.8', '>= 5.8.4'
+gem "minitest-rails"
 gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'

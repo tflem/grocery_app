@@ -1,0 +1,10 @@
+<%= form_for(@item, url: groceries_path) do |f| %>
+  <%= render "shared/error_messages", object: @item %>
+    <%= f.label :item %>
+    <%= f.text_field :item, class: "form-control" %>
+
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity, class: "form-control" %>
+
+    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

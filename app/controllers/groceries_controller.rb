@@ -27,6 +27,16 @@ class GroceriesController < ApplicationController
     end
   end
 
+  def update
+    @item = Grocery.find(params[:id])
+    if @item.update_attributes(grocery_params)
+      flash[:success] = "Grocery Item Updated!"
+      redirect_to @item
+    else
+      render "edit"
+    end
+  end
+
   private
 
     def grocery_params

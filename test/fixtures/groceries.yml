@@ -1,0 +1,11 @@
+first_item:
+  item: "Milk"
+  quantity: 2
+
+second_item:
+  item: "Bread"
+  quantity: 2
+
+third_item:
+  item: "Bottled Water"
+  quantity: 1

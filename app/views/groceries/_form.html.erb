@@ -1,5 +1,5 @@
-<%= form_for(@item, url: groceries_path) do |f| %>
-  <%= render "shared/error_messages", object: @item %>
+<%= form_for(@item) do |f| %>
+  <%= render "shared/error_messages" %>
     <%= f.label :item %>
     <%= f.text_field :item, class: "form-control" %>
 

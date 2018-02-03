@@ -13,6 +13,10 @@ class GroceriesController < ApplicationController
     @item = Grocery.new
   end
 
+  def edit
+    @item = Grocery.find(params[:id])
+  end
+
   def create
     @item = Grocery.new(grocery_params)
     if @item.save

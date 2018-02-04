@@ -1,7 +1,6 @@
 require "test_helper"
 
 class ItemsEditTest < ActionDispatch::IntegrationTest
-  include Devise::Test::IntegrationHelpers
 
   def setup
     @item = groceries(:first_item)

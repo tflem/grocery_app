@@ -1,5 +1,5 @@
 class GroceriesController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new]
+  before_action :authenticate_user!, only: [:index, :new, :edit, :update]
 
   def index
     @all_items = Grocery.all

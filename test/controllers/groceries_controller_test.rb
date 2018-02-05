@@ -1,13 +1,15 @@
 require 'test_helper'
 
 class GroceriesControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
 
   def setup
+    @user = users(:dash)
     @item = groceries(:first_item)
   end
 
   test "should get new" do
-    sign_in users(:dash)
+    sign_in @user
     get new_grocery_path
     assert_response :success
   end

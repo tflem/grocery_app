@@ -1,2 +1,11 @@
 dash:
   email: dash@furrealfriends.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  created_at: 2018-01-01 08:31:23
+  updated_at: 2018-01-01 08:30:59
+
+paws:
+  email: paws@furrealfriends.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  created_at: 2018-01-02 08:31:23
+  updated_at: 2018-01-02 08:30:59

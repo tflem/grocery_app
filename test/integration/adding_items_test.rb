@@ -1,6 +1,7 @@
 require "test_helper"
 
 class AddingItemsTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
 
   test "invalid form input" do
     get new_grocery_path

@@ -3,7 +3,12 @@ require "test_helper"
 class AddingItemsTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
+  def setup
+    @user = users(:dash)
+  end
+
   test "invalid form input" do
+    sign_in @user
     get new_grocery_path
     assert_no_difference "Grocery.count" do
       post groceries_path, params: { grocery: { item: "",
@@ -15,6 +20,7 @@ class AddingItemsTest < ActionDispatch::IntegrationTest
   end
 
   test "valid form input" do
+    sign_in @user
     get new_grocery_path
     assert_difference "Grocery.count", 1 do
       post groceries_path, params: { grocery: { item: "milk",

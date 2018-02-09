@@ -1,4 +1,9 @@
+<% provide(:title, "Grocery List")%>
 <h2>Grocery List</h2>
+
+<div>
+  <%= will_paginate %>
+</div>
 
 <div class="table-responsive">
 <table class="table table-bordered">
@@ -10,15 +15,19 @@
       <th>Edit</th>
     </tr>
 
-    <% @all_items.each do |item| %>
+    <% @groceries.each do |item| %>
       <tr>
-        <td><%= item.item %></td>
-        <td><%= item.quantity %></td>
+        <td class="grocery-items"><%= item.item %></td>
+        <td class="grocery-quantities"><%= item.quantity %></td>
         <td><%= link_to "Show", grocery_path(item) %></td>
         <td><%= link_to "Edit", edit_grocery_path(item) %></td>
       </tr>
     <% end %>
 </table>
+</div>
+
+<div>
+  <%= will_paginate %>
 </div>
 
 <div class="btn btn-primary">

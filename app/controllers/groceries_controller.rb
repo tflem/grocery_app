@@ -1,8 +1,8 @@
 class GroceriesController < ApplicationController
 
   def index
-    @all_items = Grocery.all
-    authorize @all_items
+    @groceries = Grocery.paginate(page: params[:page])
+    authorize @groceries
   end
 
   def show

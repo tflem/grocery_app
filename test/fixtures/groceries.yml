@@ -9,3 +9,21 @@ second_item:
 third_item:
   item: "Bottled Water"
   quantity: 1
+
+fourth_item:
+  item: "Soda Pop"
+  quantity: 2
+
+fifth_item:
+  item: "Eggs"
+  quantity: 2
+
+sixth_item:
+  item: "Chicken"
+  quantity: 1
+
+<% 30.times do |n| %>
+grocery_<%= n %>:
+  item:  <%= "Grocery #{n}" %>
+  quantity: <%= "Grocery-#{n}" %>
+<% end %>

@@ -1,27 +1,23 @@
 class GroceriesController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
     @groceries = Grocery.paginate(page: params[:page])
-    authorize @groceries
   end
 
   def show
-    @item = Grocery.find(params[:id])
-    authorize @item
   end
 
   def new
-    @item = Grocery.new
+    @item = current_user.groceries.build if user_signed_in?
     authorize @item
   end
 
   def edit
-    @item = Grocery.find(params[:id])
-    authorize @item
   end
 
   def create
-    @item = Grocery.new(grocery_params)
+    @item = current_user.groceries.build(grocery_params)
     authorize @item
     if @item.save
       flash[:success] = "Grocery Item Added!"
@@ -32,8 +28,7 @@ class GroceriesController < ApplicationController
   end
 
   def update
-    @item = Grocery.find(params[:id])
-    if @item.update_attributes(grocery_params)
+    if @item.update(grocery_params)
       flash[:success] = "Grocery Item Updated!"
       redirect_to @item
     else
@@ -41,9 +36,20 @@ class GroceriesController < ApplicationController
     end
   end
 
+  def destroy
+    @item.destroy
+    flash[:success] = "Grocery Item Removed!"
+    redirect_to groceries_path
+  end
+
   private
 
     def grocery_params
       params.require(:grocery).permit(:item, :quantity)
+    end
+
+    def set_item
+      @item = Grocery.find(params[:id])
+      authorize @item
     end
 end

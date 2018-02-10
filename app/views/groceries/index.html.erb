@@ -13,6 +13,7 @@
       <th>Quantity</th>
       <th>Show</th>
       <th>Edit</th>
+      <th>Delete</th>
     </tr>
 
     <% @groceries.each do |item| %>
@@ -21,6 +22,9 @@
         <td class="grocery-quantities"><%= item.quantity %></td>
         <td><%= link_to "Show", grocery_path(item) %></td>
         <td><%= link_to "Edit", edit_grocery_path(item) %></td>
+        <td><%= link_to "Delete", grocery_path(item),
+                method: :delete,
+                data: { confirm: "Sure About That?" } %></td>
       </tr>
     <% end %>
 </table>

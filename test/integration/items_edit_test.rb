@@ -4,11 +4,12 @@ class ItemsEditTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   def setup
+    @user = users(:dash)
     @item = groceries(:first_item)
   end
 
   test "unsuccessful item edit" do
-    sign_in users(:dash)
+    sign_in @user
     get edit_grocery_path(@item)
     assert_template "groceries/edit"
     patch grocery_path(@item), params: { grocery: { item:     "",
@@ -18,7 +19,7 @@ class ItemsEditTest < ActionDispatch::IntegrationTest
   end
 
   test "successful item edit" do
-    sign_in users(:dash)
+    sign_in @user
     get edit_grocery_path(@item)
     assert_template "groceries/edit"
     item     = "Milk"

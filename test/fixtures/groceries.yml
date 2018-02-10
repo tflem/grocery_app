@@ -30,6 +30,6 @@ sixth_item:
 
 <% 30.times do |n| %>
 grocery_<%= n %>:
-  item:  <%= "grocery#{n}" %>
-  quantity: <%= "grocery-#{n}" %>
+  item:  <%= "#{n}" %>
+  quantity: <%= "#{n}" %>
 <% end %>

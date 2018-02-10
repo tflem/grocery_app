@@ -9,16 +9,17 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="container-fluid">
-      <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <% end %>      
-    </div>
 
     <ul class="hmenu">
       <%= render 'devise/menu/registration' %>|
       <%= render 'devise/menu/login_logout' %>
     </ul>
+
+    <div class="container-fluid">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+    </div>    
 
     <div class="container-fluid">
       <%= yield %>

@@ -11,19 +11,19 @@
     <tr class="info">
       <th>Item</th>
       <th>Quantity</th>
-      <th>Show</th>
       <th>Edit</th>
       <th>Delete</th>
     </tr>
 
     <% @groceries.each do |item| %>
       <tr>
-        <td class="grocery-items"><%= item.item %></td>
+        <td class="grocery-items"><%= item.item.titleize %></td>
         <td class="grocery-quantities"><%= item.quantity %></td>
-        <td><%= link_to "Show", grocery_path(item) %></td>
-        <td><%= link_to "Edit", edit_grocery_path(item) %></td>
+        <td><%= link_to "Edit", edit_grocery_path(item),
+                 class: "btn btn-primary"%></td>
         <td><%= link_to "Delete", grocery_path(item),
                 method: :delete,
+                class: "btn btn-primary",
                 data: { confirm: "Sure About That?" } %></td>
       </tr>
     <% end %>
@@ -34,6 +34,6 @@
   <%= will_paginate %>
 </div>
 
-<div class="btn btn-primary">
-  <%= link_to "Add Another Item", new_grocery_path, class: "btn" %>
+<div>
+  <%= link_to "Add Another Item", new_grocery_path, class: "btn btn-primary" %>
 </div>

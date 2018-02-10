@@ -1,6 +1,6 @@
 <p class="item-heading">
   <strong>Item:</strong>
-  <%= @item.item %>
+  <%= @item.item.titleize %>
 </p>
 
 <p class="quantity-heading">
@@ -8,12 +8,12 @@
   <%= @item.quantity %>
 </p>
 
-<div class="btn btn-primary">
-  <%= link_to "Add Another Item", new_grocery_path, class: "btn" %>
+<div class>
+  <%= link_to "Add Another Item", new_grocery_path, class: "btn btn-primary" %>
 </div>
-<div class="btn btn-primary">
-  <%= link_to "Edit This Item", edit_grocery_path, class: "btn" %>
+<div class>
+  <%= link_to "Edit This Item", edit_grocery_path, class: "btn btn-primary" %>
 </div>
-<div class="btn btn-primary">
-  <%= link_to "Show All Items", groceries_path, class: "btn" %>
+<div class>
+  <%= link_to "Show All Items", groceries_path, class: "btn btn-primary" %>
 </div>

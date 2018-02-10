@@ -3,7 +3,8 @@ require 'test_helper'
 class GroceryTest < ActiveSupport::TestCase
 
   def setup
-    @groceries = Grocery.new(item: "Milk", quantity: 2)
+    @user = users(:dash)
+    @groceries = @user.groceries.build(item: "Milk", quantity: 2)
   end
 
   test "should be valid" do

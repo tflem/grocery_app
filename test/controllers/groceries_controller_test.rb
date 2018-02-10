@@ -4,8 +4,9 @@ class GroceriesControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   def setup
-    @user = users(:dash)
-    @item = groceries(:first_item)
+    @user       = users(:dash)
+    @other_user = users(:paws)
+    @item       = groceries(:first_item)
   end
 
   test "should get new" do
@@ -25,5 +26,22 @@ class GroceriesControllerTest < ActionDispatch::IntegrationTest
                                                     quantity: @item.quantity } }
     assert_not flash.empty?
     assert_redirected_to new_user_session_path
+  end
+
+  test "should redirect destroy when not logged in" do
+    assert_no_difference "Grocery.count" do
+      delete grocery_path(@item)
+    end
+    assert_redirected_to new_user_session_path
+  end
+
+  test "should redirect when attempting to destroy item created
+    by another user" do
+    sign_in @other_user
+    assert_no_difference "Grocery.count" do
+      delete grocery_path(@item)
+    end
+    follow_redirect!
+    assert_not flash.empty?
   end
 end

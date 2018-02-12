@@ -9,6 +9,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <%= render "layouts/header" %>
 
     <ul class="hmenu">
       <%= render 'devise/menu/registration' %>|
@@ -19,7 +20,8 @@
       <% flash.each do |message_type, message| %>
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
       <% end %>
-    </div>    
+    </div>
+
 
     <div class="container-fluid">
       <%= yield %>

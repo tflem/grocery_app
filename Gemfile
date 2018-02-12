@@ -19,9 +19,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.4'
 gem 'pundit'
-gem 'will_paginate',           '3.1.6'
-gem 'bootstrap-will_paginate', '1.0.0'
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'will_paginate-bootstrap4'
+gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 group :development, :test do

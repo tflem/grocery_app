@@ -12,7 +12,7 @@ class GroceriesIndexTest < ActionDispatch::IntegrationTest
     sign_in @user
     get groceries_path
     assert_template "groceries/index"
-    assert_select "div.pagination", count: 2
+    assert_select "ul.pagination", count: 2
     Grocery.paginate(page: 1).each do |grocery|
       assert_select "td.grocery-items", text: grocery.item
     end

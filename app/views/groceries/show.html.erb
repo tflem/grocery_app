@@ -1,19 +1,22 @@
-<p class="item-heading">
-  <strong>Item:</strong>
-  <%= @item.item.titleize %>
-</p>
+<% provide(:title, "Your Item Summary")%>
+<h2>Grocery Item Summary</h2>
 
-<p class="quantity-heading">
-  <strong>Quantity:</strong>
-  <%= @item.quantity %>
-</p>
-
-<div class>
-  <%= link_to "Add Another Item", new_grocery_path, class: "btn btn-dark" %>
-</div>
-<div class>
-  <%= link_to "Edit This Item", edit_grocery_path, class: "btn btn-dark" %>
-</div>
-<div class>
-  <%= link_to "Show All Items", groceries_path, class: "btn btn-dark" %>
-</div>
+<table class="table table-responsive">
+  <table class="table table-dark">
+  <thead class="thead-dark">
+    <tr>
+      <th >Item</th>
+      <th>Quantity</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <td class="grocery-items align-middle"><%= @item.item.titleize %></td>
+    <td class="grocery-quantities align-middle"><%= @item.quantity %></td>
+    <td><%= link_to "Edit", edit_grocery_path(@item),
+            class: "btn btn-secondary btn-large" %></td>
+    <td><%= link_to "Add More", new_grocery_path,
+            class: "btn btn-secondary btn-large" %></td>
+  </tbody>
+</table>
+</table>

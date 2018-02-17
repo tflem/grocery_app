@@ -10,8 +10,7 @@
       <tr>
         <th>Item</th>
         <th>Quantity</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th>Actions</th>
       </tr>
 
       <% @groceries.each do |item| %>
@@ -19,8 +18,8 @@
           <td class="grocery-items align-middle"><%= item.item.titleize %></td>
           <td class="grocery-quantities align-middle"><%= item.quantity %></td>
           <td><%= link_to "Edit", edit_grocery_path(item),
-                  class: "btn btn-secondary btn-xs" %></td>
-          <td><%= link_to "Delete", grocery_path(item),
+                  class: "btn btn-secondary btn-xs" %>
+          <%= link_to "Delete", grocery_path(item),
                   method: :delete,
                   class: "btn btn-secondary btn-xs",
                   data: { confirm: "Sure About That?" } %></td>

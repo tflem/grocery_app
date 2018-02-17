@@ -6,17 +6,15 @@
     <tr>
       <th>Item</th>
       <th>Quantity</th>
-      <th>Edit</th>
-      <th>Add More</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
     <td class="grocery-items align-middle"><%= @item.item.titleize %></td>
     <td class="grocery-quantities align-middle"><%= @item.quantity %></td>
     <td><%= link_to "Edit", edit_grocery_path(@item),
-            class: "btn btn-secondary btn-large" %></td>
-    <td><%= link_to "Add More", new_grocery_path,
+            class: "btn btn-secondary btn-large" %>
+        <%= link_to "Add More", new_grocery_path,
             class: "btn btn-secondary btn-large" %></td>
   </tbody>
-</table>
 </table>

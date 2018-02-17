@@ -1,25 +1,36 @@
+@import "ionicons";
 @import "bootstrap";
 
 /* mixins, variables, etc. */
 
 $gray-medium-light: #EAEAEA;
 $state-danger-text: #F0F0F0;
+$black-color:       #000000;
+$white-color:       #FFFFFF;
+$red-heart:         #E74C3C;
+$twitter-blue:      #00ACED;
+$linkedin-blue:     #0077B5;
+$github-blue:       #4078C0;
+$dark-color:        #343A40;
 
 h2 {
   text-align: center;
+  padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 
-.pagination > ul > active {
-    color: green !important; // use your own color here
+/* Navigation */
+
+.navbar {
+  margin-bottom: 0.5em;
 }
 
 /* Buttons */
 
 .btn {
   font-size: 1.1em;
-  color: #FFF;
-  margin-top: 0.5em;
+  color: $white-color;
+  margin-bottom: 0.5em;
 }
 
 /* Grocery Table */
@@ -35,24 +46,12 @@ h2 {
   box-sizing:         border-box;
 }
 
-/* sign-in/sign-out */
-
-ul.hmenu {
-  list-style: none;
-  margin: 0 0 2em;
-  padding: 0;
-}
-
-ul.hmenu li {
-  display: inline;
-}
-
-/* forms */
+/* Forms */
 
 input, textarea, select, .uneditable-input {
   border: 0.1em solid #BBB;
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 1.0em;
   @include box_sizing;
 }
 
@@ -65,9 +64,9 @@ input, textarea, select, .uneditable-input {
 }
 
 #error_explanation {
-  color: red;
+  color: $dark-color;
   ul {
-    color: red;
+    color: $dark-color;
     margin: 0em 0em 1.875em 0em;
   }
 }
@@ -79,7 +78,50 @@ input, textarea, select, .uneditable-input {
   }
 }
 
-/* debugger */
+/* Footer */
+
+footer {
+  margin-top: 2.0em;
+  padding-top: 1.0em;
+  color: $white-color;
+}
+
+.ion-heart { color: $red-heart; }
+
+.social-icons {
+  list-style: none;
+  float: none;
+  color:$white-color;
+  li {
+    display: inline-block;
+    margin-right: 0.6em;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-icons li a:link,
+.social-icons li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: $white-color;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.ion-social-twitter,
+.ion-social-linkedin,
+.ion-social-github {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.ion-social-twitter:hover { color: $twitter-blue; }
+.ion-social-linkedin:hover { color: $linkedin-blue; }
+.ion-social-github:hover { color: $github-blue; }
+
+/* Debugger */
 
 .debug_dump {
   clear: both;

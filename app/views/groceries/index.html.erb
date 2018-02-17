@@ -4,8 +4,7 @@
 <%= will_paginate @groceries, list_classes: %w(pagination justify-content-center) %>
 <%= link_to "Add Another Item", new_grocery_path, class: "btn btn-dark" %>
 
-<table class="table table-responsive">
-  <table class="table table-striped table-dark">
+<table class="table table-striped table-dark">
     <caption>List of Grocery Items</caption>
     <thead class="thead-dark">
       <tr>
@@ -20,10 +19,10 @@
           <td class="grocery-items align-middle"><%= item.item.titleize %></td>
           <td class="grocery-quantities align-middle"><%= item.quantity %></td>
           <td><%= link_to "Edit", edit_grocery_path(item),
-                  class: "btn btn-secondary btn-large" %></td>
+                  class: "btn btn-secondary btn-xs" %></td>
           <td><%= link_to "Delete", grocery_path(item),
                   method: :delete,
-                  class: "btn btn-secondary btn-large",
+                  class: "btn btn-secondary btn-xs",
                   data: { confirm: "Sure About That?" } %></td>
         </tr>
       <% end %>

@@ -35,9 +35,9 @@ h2 {
 
 /* Grocery Table */
 
-.table-responsive {
+.table {
   align: center;
-  font-size: 1.5em;
+  font-size: 0.80em;
 }
 
 @mixin box_sizing {
@@ -83,6 +83,7 @@ input, textarea, select, .uneditable-input {
 footer {
   margin-top: 2.0em;
   padding-top: 1.0em;
+  margin-bottom: 1.0em;
   color: $white-color;
 }
 
@@ -94,7 +95,7 @@ footer {
   color:$white-color;
   li {
     display: inline-block;
-    margin-right: 0.6em;
+    margin-right: 0.5em;
   }
   &:last-child {
     margin-right: 0;

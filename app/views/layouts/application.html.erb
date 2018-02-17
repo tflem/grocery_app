@@ -8,6 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
+  
   <body>
     <%= render "layouts/header" %>
 
@@ -17,10 +18,8 @@
       <% end %>
     </div>
 
-    <div class="container-fluid">
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
-    </div>
   </body>
 </html>

@@ -12,6 +12,7 @@ $twitter-blue:      #00ACED;
 $linkedin-blue:     #0077B5;
 $github-blue:       #4078C0;
 $dark-color:        #343A40;
+$form-color:        #BBBBBB;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -34,8 +35,9 @@ h2 {
 /* Buttons */
 
 .btn {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   color: $white-color;
+  margin-left: 0.2em;
   margin-bottom: 0.5em;
 }
 
@@ -44,18 +46,20 @@ h2 {
 /* Small Phones from 0 to 480px */
 @media only screen and (max-width: 480px) {
     .table {
-        font-size: 0.75em;
+        font-size: 0.80rem;
     }
 }
 
 /* Forms */
 
 input, textarea, select, .uneditable-input {
-  border: 0.1em solid #BBB;
+  border: 1px solid $form-color;
   width: 100%;
   margin-bottom: 1.0em;
   @include box_sizing;
 }
+
+/* Flash Messages */
 
 .alert-alert {
   @extend .alert-warning;
@@ -64,6 +68,8 @@ input, textarea, select, .uneditable-input {
 .alert-notice {
   @extend .alert-info;
 }
+
+/* Error Messages */
 
 #error_explanation {
   color: $dark-color;
@@ -86,6 +92,7 @@ footer {
   margin-top: 2.0em;
   padding-top: 1.0em;
   color: $white-color;
+  font-size: 1.1rem;
 }
 
 .ion-heart { color: $red-heart; }
@@ -106,7 +113,7 @@ footer {
 .social-icons li a:link,
 .social-icons li a:visited {
   text-decoration: none;
-  border: 0em;
+  border: 0px;
   color: $white-color;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;

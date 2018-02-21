@@ -10,8 +10,7 @@ class AppLayoutTest < ActionDispatch::IntegrationTest
   test "layout links" do
     get new_user_session_path
     assert_template "devise/sessions/new"
-    assert_select "a[href=?]", root_path
-    assert_select "a[href=?]", new_user_session_path
+    assert_select "a[href=?]", root_path, count: 2
     assert_select "a[href=?]", new_user_registration_path
     assert_select "a[href=?]", new_user_password_path
     sign_in @user

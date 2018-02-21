@@ -32,6 +32,10 @@ h2 {
   margin-bottom: 0.5em;
 }
 
+.navbar-brand {
+  font-weight: bold;
+}
+
 /* Buttons */
 
 .btn {
@@ -92,7 +96,8 @@ footer {
   margin-top: 2.0em;
   padding-top: 1.0em;
   color: $white-color;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .ion-heart { color: $red-heart; }
@@ -103,7 +108,7 @@ footer {
   color:$white-color;
   li {
     display: inline-block;
-    margin-right: 0.5em;
+    margin-right: 1.0em;
   }
   &:last-child {
     margin-right: 0em;

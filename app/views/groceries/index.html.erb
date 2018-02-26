@@ -1,5 +1,5 @@
-<% provide(:title, "Grocery List")%>
-<h2>Grocery List</h2>
+<% provide(:title, "Your Grocery List")%>
+<h2>Your Grocery List</h2>
 
 <%= will_paginate @groceries, list_classes: %w(pagination justify-content-center) %>
 <%= link_to "Add Another Item", new_grocery_path, class: "btn btn-dark" %>

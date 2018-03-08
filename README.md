@@ -7,6 +7,6 @@
 * SASS
 * jQuery
 * PostgreSQL
-* Bootstrap 3
+* Bootstrap 4
 
 Because making a weekly list with pen and paper has gotten rather painful.

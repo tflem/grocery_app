@@ -11,7 +11,7 @@ class AddingItemsTest < ActionDispatch::IntegrationTest
     sign_in @user
     get new_grocery_path
     assert_no_difference "Grocery.count" do
-      post groceries_path, params: { grocery: { item: "",
+      post groceries_path, params: { grocery: { item: "milk",
                                                 quantity: 2 } }
     end
     assert_template "groceries/new"
@@ -23,7 +23,7 @@ class AddingItemsTest < ActionDispatch::IntegrationTest
     sign_in @user
     get new_grocery_path
     assert_difference "Grocery.count", 1 do
-      post groceries_path, params: { grocery: { item: "milk",
+      post groceries_path, params: { grocery: { item: "powerade",
                                                 quantity: 2 } }
     end
     follow_redirect!

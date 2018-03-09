@@ -4,7 +4,7 @@ class GroceryTest < ActiveSupport::TestCase
 
   def setup
     @user = users(:dash)
-    @groceries = @user.groceries.build(item: "Milk", quantity: 2)
+    @groceries = @user.groceries.build(item: "Powerade", quantity: 2)
   end
 
   test "should be valid" do

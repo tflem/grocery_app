@@ -1,20 +1,26 @@
 <% provide(:title, "Your Item Summary")%>
 <h2>Grocery Item Summary</h2>
 
-<table class="table table-striped table-dark">
-  <thead class="thead-dark">
-    <tr>
-      <th>Item</th>
-      <th>Quantity</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <td class="grocery-items align-middle"><%= @item.item.titleize %></td>
-    <td class="grocery-quantities align-middle"><%= @item.quantity %></td>
-    <td><%= link_to "Edit", edit_grocery_path(@item),
-            class: "btn btn-secondary btn-large" %>
-        <%= link_to "Add More", new_grocery_path,
-            class: "btn btn-secondary btn-large" %></td>
-  </tbody>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped table-dark">
+        <thead class="thead-dark">
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+       <tbody>
+        <td class="grocery-items align-middle"><%= @item.item.titleize %></td>
+         <td class="grocery-quantities align-middle"><%= @item.quantity %></td>
+         <td><%= link_to "Edit", edit_grocery_path(@item),
+                 class: "btn btn-secondary btn-large" %>
+         <%= link_to "Add More", new_grocery_path,
+             class: "btn btn-secondary btn-large" %></td>
+       </tbody>
+     </table>
+   </div>
+ </div>
+</div>

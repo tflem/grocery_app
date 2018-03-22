@@ -16,19 +16,19 @@ Because making a weekly list with pen and paper has gotten rather painful.
 How to run tests:
 
 ```
-% rails t
+% rails test
 ```
 
 How to run the development console:
 
 ```
-% rails c
+% rails console
 ```
 
 How to run the development server:
 
 ```
-% rails s
+% rails server
 ```
 
 How to prepare (create and migrate) DB for `development` and `test` environments:

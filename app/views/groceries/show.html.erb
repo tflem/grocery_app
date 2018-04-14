@@ -16,9 +16,9 @@
         <td class="grocery-items align-middle"><%= @item.item.titleize %></td>
          <td class="grocery-quantities align-middle"><%= @item.quantity %></td>
          <td><%= link_to "Edit", edit_grocery_path(@item),
-                 class: "btn btn-secondary btn-large" %>
+                 class: "btn btn-secondary btn-large ion-compose" %>
          <%= link_to "Add More", new_grocery_path,
-             class: "btn btn-secondary btn-large" %></td>
+             class: "btn btn-secondary btn-large ion-plus-round" %></td>
        </tbody>
      </table>
    </div>

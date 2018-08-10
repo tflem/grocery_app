@@ -7,7 +7,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby '2.5.1'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2.0'
 gem "minitest-rails"
 gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.7'
@@ -18,10 +18,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.4', '>= 4.4.1'
 gem 'pundit', '~> 1.1'
-gem 'font-ionicons-rails'
 gem 'will_paginate-bootstrap4'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'font-awesome-sass', '~> 5.2.0'
 
 group :development, :test do
   gem 'simplecov', require: false

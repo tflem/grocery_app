@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Casa Flem's Grocery App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     <%= favicon_link_tag 'Fruits-Vegetables-icon.png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -10,11 +10,11 @@
   </head>
   
   <body>
-    <%= render "layouts/header" %>
+    <%= render 'layouts/header' %>
 
-    <div class="container-fluid">
+    <div class='container-fluid'>
       <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+        <%= content_tag(:div, message, class: 'alert alert-#{message_type}') %>
       <% end %>
     </div>
 

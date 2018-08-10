@@ -91,7 +91,7 @@ footer {
   font-weight: bold;
 }
 
-.ion-heart { color: $red-heart; }
+.fa-heart { color: $red-heart; }
 
 .social-icons {
   list-style: none;
@@ -115,16 +115,16 @@ footer {
   transition: color 0.3s;
 }
 
-.ion-social-twitter,
-.ion-social-linkedin,
-.ion-social-github {
+.fa-twitter,
+.fa-linkedin,
+.fa-github {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
-.ion-social-twitter:hover { color: $twitter-blue; }
-.ion-social-linkedin:hover { color: $linkedin-blue; }
-.ion-social-github:hover { color: $github-blue; }
+.fa-twitter:hover { color: $twitter-blue; }
+.fa-linkedin:hover { color: $linkedin-blue; }
+.fa-github:hover { color: $github-blue; }
 
 /* Debugger */
 

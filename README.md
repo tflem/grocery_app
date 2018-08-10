@@ -2,14 +2,14 @@
 
 > Just a simple grocery list application, which features or will feature the following:
 
-* Ruby on Rails 5
-* HTML
+* Ruby on Rails 5.2.1
+* HTML5
 * SASS
 * jQuery
 * PostgreSQL
 * Bootstrap 4
 
-Because making a weekly list with pen and paper has gotten rather painful.
+Because making a weekly list with pen and paper is painful.
 
 ## Setup
 

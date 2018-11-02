@@ -20,7 +20,7 @@ class GroceriesController < ApplicationController
     @item = current_user.groceries.build(grocery_params)
     authorize @item
     if @item.save
-      flash[:success] = "Your Item Has Been Added!"
+      flash['success'] = "Your Item Has Been Added!"
       redirect_to @item
     else
       render "new"
@@ -29,7 +29,7 @@ class GroceriesController < ApplicationController
 
   def update
     if @item.update(grocery_params)
-      flash[:success] = "Your Item Has Been Updated!"
+      flash['notice'] = "Your Item Has Been Updated!"
       redirect_to @item
     else
       render "edit"
@@ -38,7 +38,7 @@ class GroceriesController < ApplicationController
 
   def destroy
     @item.destroy
-    flash[:success] = "The Item Has Been Removed."
+    flash['success'] = "The Item Has Been Removed."
     redirect_to groceries_path
   end
 

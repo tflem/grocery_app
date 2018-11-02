@@ -19,7 +19,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.4', '>= 4.4.1'
 gem 'pundit', '~> 1.1'
 gem 'will_paginate-bootstrap4'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.1.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'font-awesome-sass', '~> 5.2.0'
 

@@ -38,3 +38,8 @@ How to prepare (create and migrate) DB for `development` and `test` environments
 
 % rails db:migrate
 ```
+
+## License
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2017-present, Tim Fleming

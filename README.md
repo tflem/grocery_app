@@ -42,4 +42,4 @@ How to prepare (create and migrate) DB for `development` and `test` environments
 ## License
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2017-present, Tim Fleming
+Copyright (c) 2017-Present, Tim Fleming

@@ -9,7 +9,7 @@ end
 ruby '2.5.1'
 gem 'rails', '~> 5.2.2.1'
 gem "minitest-rails"
-gem 'pg', '~> 0.18.4'
+gem 'pg', '~> 1.1.4'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'

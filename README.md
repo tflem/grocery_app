@@ -2,7 +2,7 @@
 
 > Just a simple grocery list application, which features or will feature the following:
 
-* Ruby on Rails 5.2.2.1
+* Ruby on Rails 5.2.4.2
 * HTML5
 * SASS
 * jQuery
